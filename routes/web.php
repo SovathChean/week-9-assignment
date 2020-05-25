@@ -14,5 +14,33 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('estate.home');
 });
+Route::get('/about', function () {
+    return view('estate.about');
+});
+Route::get('/property-grid', function () {
+    return view('estate.property-grid');
+});
+Route::get('/blog-grid', function () {
+    return view('estate.blog-grid');
+});
+Route::get('/property-single', function () {
+    return view('estate.property-single');
+});
+Route::get('/blog-single', function () {
+    return view('estate.blog-single');
+});
+Route::get('/agents-grid', function () {
+    return view('estate.agents-grid');
+});
+Route::get('/agent-single', function () {
+    return view('estate.agent-single');
+});
+Route::get('/contact', function () {
+    return view('estate.contact');
+});
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
